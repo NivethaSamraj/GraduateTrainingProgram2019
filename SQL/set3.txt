@@ -351,14 +351,16 @@ select name from reviewer r join rating r1 on r.rid=r1.rid group by r1.rid havin
 
 18.
 
-select title,director from movie group by director having count(director)>1 order by director,title;
-+---------+------------------+
-| title   | director         |
-+---------+------------------+
-| Titanic | James Cameron    |
-| E.T.    | Steven Spielberg |
-+---------+------------------+
-2 rows in set (0.00 sec)
+select m.title,m.director from movie m join movie m1 on m.director=m1.director group by m.mid having count(m.mid)>1 order by m.director,m.title;
++-------------------------+------------------+
+| title                   | director         |
++-------------------------+------------------+
+| Avatar                  | James Cameron    |
+| Titanic                 | James Cameron    |
+| E.T.                    | Steven Spielberg |
+| Raiders of the Lost Ark | Steven Spielberg |
++-------------------------+------------------+
+4 rows in set (0.00 sec)
 
 19.
 
