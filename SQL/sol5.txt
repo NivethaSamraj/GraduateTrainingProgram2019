@@ -1,0 +1,148 @@
+1.
+
+select m_name from musician m join concert c on m.m_no=c.concert_orgniser where concert_venue="Assembly Rooms" and con_date>"1997-02-01";
++---------------+
+| m_name        |
++---------------+
+| James Steeple |
++---------------+
+1 row in set (0.00 sec)
+
+2.
+
+select m_name from musician m join performer p on m_no=perf_is join place on born_in=place_no where instrument in ("guitar","violin") and place_country="England";
++------------------+
+| m_name           |
++------------------+
+| Harry Forte      |
+| Davis Heavan     |
+| Alan Fluff       |
+| Theo Mengel      |
+| James First      |
+| Harriet Smithson |
++------------------+
+6 rows in set (0.00 sec)
+
+3.
+
+select m_name,place_town,con_date from concert c join place p on concert_in=place_no join musician m on m_no=concert_orgniser where place_country="USA";
++---------------+------------+------------+
+| m_name        | place_town | con_date   |
++---------------+------------+------------+
+| James Steeple | New York   | 1997-01-15 |
++---------------+------------+------------+
+1 row in set (0.00 sec)
+
+4.
+
+
+
+
+
+
+
+
+5.
+
+select instrument,avg(perf_is) from performer group by instrument;
++------------+--------------+
+| instrument | avg(perf_is) |
++------------+--------------+
+| violin     |       7.0000 |
+| viola      |      12.0000 |
+| banjo      |       6.0000 |
+| guitar     |      15.0000 |
+| trumpet    |      16.0000 |
+| bass       |      10.6667 |
+| flute      |       9.0000 |
+| cornet     |      20.0000 |
+| drums      |       7.0000 |
+| cello      |      12.3333 |
+| trombone   |      20.0000 |
+| horn       |       3.0000 |
+| clarinet   |       8.0000 |
++------------+--------------+
+13 rows in set (0.00 sec)
+
+6.
+
+select m_name,place_town,con_date from musician join concert on m_no=concert_orgniser join place on place_no=concert_in where place_country="USA";
++---------------+------------+------------+
+| m_name        | place_town | con_date   |
++---------------+------------+------------+
+| James Steeple | New York   | 1997-01-15 |
++---------------+------------+------------+
+1 row in set (0.00 sec)
+
+
+7.
+
+select name as band_name,total as no_of_players from ((select avg(cp) average from (select count(player) cp from plays_in group by band_id) a) a1,(select count(player) total,band_id b1,band_name name from plays_in p join band b on band_no=band_id group by band_id) b) where total>average;
++-----------+---------------+
+| band_name | no_of_players |
++-----------+---------------+
+| ROP       |             7 |
+| Oh well   |             6 |
+| AASO      |             7 |
++-----------+---------------+
+3 rows in set (0.00 sec)
+
+8.
+
+select m_name from composer c join performance p on c.comp_is=p.conducted_by join musician m on m.m_no=c.comp_is join place p1 on p1.place_no=m.living_in where place_country="Britain" group by comp_is,conducted_by;
+Empty set (0.00 sec)
+
+                                                        or
+
+select m_name from musician where m_no in (select comp_is from composer join performance on comp_is=conducted_by where comp_is in (select m_no from musician join place on living_in=place_no where place_country="England"));
++-------------+
+| m_name      |
++-------------+
+| Phil Hot    |
+| Rose Spring |
+| Tony Smythe |
++-------------+
+3 rows in set (0.00 sec)
+
+9.
+
+select band_name from composer join musician on comp_is=m_no join band on band_contact=m_no where m_name="Sue Little";
++------------------+
+| band_name        |
++------------------+
+| Swinging strings |
++------------------+
+1 row in set (0.00 sec)
+
+10.
+
+
+
+
+
+
+11.
+
+select m_name,place_town from performer join musician on perf_is=m_no join place on place_no=born_in where place_town in (select place_town from musician join place on place_no=born_in where m_name="James First" ) group by m_name;
++-------------+------------+
+| m_name      | place_town |
++-------------+------------+
+| Theo Mengel | London     |
+| Alan Fluff  | London     |
+| James First | London     |
++-------------+------------+
+3 rows in set (0.00 sec)
+
+                                                or
+
+select m_name,place_town from performer join musician on perf_is=m_no join place on place_no=born_in where place_town in (select place_town from musician join place on place_no=born_in where m_name="James First") and m_name!="James First" group by m_name;
++-------------+------------+
+| m_name      | place_town |
++-------------+------------+
+| Theo Mengel | London     |
+| Alan Fluff  | London     |
++-------------+------------+
+2 rows in set (0.00 sec)
+
+12.
+
