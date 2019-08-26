@@ -334,11 +334,15 @@ select m_name,place_town,con_date from concert c join place p on concert_in=plac
 1 row in set (0.00 sec)
 
 4.
+4. How many concerts have featured at least one composition by Andy Jones? List concert date, venue and the composition's title. (1 point possible)
 
-
-
-
-
+mysql> select c_title,concert_venue,con_date from musician join composer on m_no=comp_is join has_composed on comp_no=cmpr_no join composition on c_no=cmpn_no join performance p on c_no=performed join concert on performed_in=concert_no where m_name='Andy Jones';
++----------------+---------------+------------+
+| c_title        | concert_venue | con_date   |
++----------------+---------------+------------+
+| A Simple Piece | Metropolitan  | 1997-01-15 |
++----------------+---------------+------------+
+1 row in set (0.00 sec)
 
 
 
@@ -414,11 +418,20 @@ select band_name from composer join musician on comp_is=m_no join band on band_c
 +------------------+
 1 row in set (0.00 sec)
 
-10.
 
+10. List the bands that have played music composed by Sue Little; Give the titles of the composition in each case. (1 point possible)
 
-
-
+mysql> select c_title,band_name from musician m join composer c on m_no=comp_is join has_composed hc on comp_no=cmpr_no join composition c1 on c_no=cmpn_no join performance p on c_no=performed join band b on band_no=gave where m_name='Sue Little' order by band_name,c_title;
++-----------------------+---------------------+
+| c_title               | band_name           |
++-----------------------+---------------------+
+| Slow Song             | BBSO                |
+| Slow Symphony Blowing | BBSO                |
+| Slow Symphony Blowing | Somebody Loves this |
+| Slow Song             | Swinging strings    |
+| Slow Song             | The left Overs      |
++-----------------------+---------------------+
+5 rows in set (0.00 sec)
 
 
 11.
