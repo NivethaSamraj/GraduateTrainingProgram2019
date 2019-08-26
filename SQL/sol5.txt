@@ -593,3 +593,5 @@ mysql> select m1.m_no,p1.band_id,b1.band_name from musician m1 join performer pe
 1 row in set (0.00 sec)
 
 
+
+
