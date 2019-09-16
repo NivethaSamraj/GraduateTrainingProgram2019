@@ -106,7 +106,23 @@ print(tot)
 
 7.
 
-Write a function isIn() that accepts two strings as arguments and returns True if either string occurs anywhere in the other, and False otherwise. Hint: you might want to use the built-in str operation in.
+Write a function isIn() that accepts two strings as arguments and returns True if either string occurs anywhere in the other, and False otherwise. 
+Hint: you might want to use the built-in str operation in.
+
+
+a=input("Enter the string1")
+b=input("Enter the string2")
+def isIn(a,b):
+    if a in b or b in a:
+        print("True")
+    else:
+        print("False")
+
+isIn(a,b)
+
+8)
+
+
 
 9.
 Assume that we execute the following assignment statements: width = 17 height = 12.0 delimiter = '.' For each of the following expressions, write the value of the expression and the type (of the value of the expression).
@@ -129,8 +145,6 @@ print(type(delimiter*5))
 
 
 10.
-
-
 
 
 
