@@ -1,7 +1,64 @@
 1)
 
+a='''Hakka and Bukka were brothers and warriors. The brothers wanted to build their own kingdom where people 
+could live without fear. They collected a band of young men and trained them in warfare. 
+They lived in a forest hideout on the banks of the river Tungabhadra in South India.
+One day, the brothers were out on a hunt. Ferocious dogs accompanied them. They crossed the river and rode on. 
+A couple of frightened rabbits ran out of the bushes. The dogs gave them chase with the two brothers closely
+ behind on their horses.
+It was a long chase. The rabbits were running for their life. The dogs were catching up. Suddenly, in a swift move, 
+the rabbits turned and faced the dogs. Taken aback by the show of defiance, the barking dogs stepped back. Hakka called 
+back the dogs. As the dogs turned back, the rabbits walked away.
+Hakka looked around. They were on the other side of the Tungabhadra. It was a rocky land. The sun was blazing in the sky.
+“Strange! I’ve never seen rabbits challenging dogs before!” said Bukka.
+“That’s the quality of this land,” said a quiet voice, “Even rabbits give fight.”
+Startled to hear a stranger speak, the two brothers turned.
+They saw a holy man walking towards them. He was a picture of peace. At the same time, his eyes were blazing bright.'''
+
+b=len(a)
+print(b)
 
 
+c=a.split(" ")
+print(c)
+print(len(c))
+
+
+mydict={}
+for i in c:
+    if i not in mydict:
+        mydict[i]=1
+    else:
+        mydict[i]+=1
+print(mydict)
+
+mylist=[]
+for i in mydict:
+    mylist.append(mydict[i])
+
+maxocc=max(mylist)
+print(maxocc)
+a=""
+for i in mydict:
+    if maxocc==mydict[i]:
+        a=i
+        print(a)
+
+repeated=[]
+for i in mydict:
+    if mydict[i]!=1:
+        repeated.append(i)
+print(repeated)
+
+rep2=[]
+for i in mydict:
+    if mydict[i]!=1:
+        rep2.append(mydict[i])
+print(rep2)
+
+dictionary={"Length of string": b,"Number of words" : len(c),"Max Occurance":maxocc," Max Occurance word": a,
+            "Repeated word's count":rep2,"Repeated word's list":repeated}
+print(dictionary)
 
 
 3)string=input("Enter string:")
@@ -42,4 +99,5 @@ if(sorted(s1)==sorted(s2)):
       print("The strings are anagrams.")
 else:
       print("The strings aren't anagrams.")
+
 
