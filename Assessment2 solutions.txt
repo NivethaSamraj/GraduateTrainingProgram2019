@@ -1,0 +1,89 @@
+4)
+lis=[1,1,2,4,4,6,8,5]
+lis1=[]
+print("Sample list",lis)
+for i in lis:
+    if i not in lis1:
+        lis1.append(i)
+print("Unique list" ,lis1)
+
+o/p:
+
+
+Sample list [1, 1, 2, 4, 4, 6, 8, 5]
+Unique list [1, 2, 4, 6, 8, 5]
+
+
+6)
+a=int(input("Enter the number of words"))
+li=[]
+for i in range(1,a):
+    b=str(input())
+print(b)
+d=b.split(" ")
+c="-".join(d)
+print(c)
+
+
+Enter the number of words2
+hi there
+
+hi there
+hi-there
+
+
+3)
+
+
+s=input("Enter the string")
+uppercount=0
+lowercount=0
+for i in s:
+    if ord(i)>65 and ord(i)<90:
+        uppercount=uppercount+1
+    else:
+        lowercount=lowercount+1
+print("Number of uppercase letter:" ,uppercount)
+print("Number of lowercase letter:",lowercount)
+
+o/p:
+Enter the stringNivetha
+Number of uppercase letter: 1
+Number of lowercase letter: 6
+
+
+5)
+
+
+def pangramcheck(str):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for char in alphabet:
+        if char not in str.lower():
+            return false
+    
+string = 'the quick brown fox jumps over the lazy dog'
+if (pangramcheck(string) == True):
+    print("Yes")
+else:
+    print("No")
+
+
+o/p:
+No
+
+2) 
+
+fname = input("Enter file name: ")
+total = 0
+with open("C:\Users\A08019dirp_c2e.03.06\Desktop\file.txt", 'r') as f:
+for i in f:
+	total=total+1
+print(str(total))
+
+
+
+
+
+
+
+
