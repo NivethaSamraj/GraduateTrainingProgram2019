@@ -1,0 +1,38 @@
+List full details of all hotels.
+List full details of all hotels in New York.
+List the names and cities of all guests, ordered according to their cities.
+List all details for non-smoking rooms in ascending order of price.
+List the number of hotels there are.
+List the cities in which guests live. Each city should be listed only once.
+List the average price of a room.
+List hotel names, their room numbers, and the type of that room.
+List the hotel names, booking dates, and room numbers for all hotels in New York.
+What is the number of bookings that started in the month of September?
+List the names and cities of guests who began a stay in New York in August.
+List the hotel names and room numbers of any hotel rooms that have not been booked.
+List the hotel name and city of the hotel with the highest priced room.
+List hotel names, room numbers, cities, and prices for hotels that have rooms with prices lower than the lowest priced room in a Boston hotel.
+List the average price of a room grouped by city.
+
+
+
+
+Table Descriptions
+The following set of tables make up a database that is used by a booking 
+agency to book hotel reservations for their client hotels.
+Attributes that are underscored make up the primary key for that table. 
+Attributes marked with @ denote a foreign key which refers to the primary key of another of the tables. 
+In the Room table, Hotel_No is a foreign key which refers to the primary key of the Hotel table. 
+Type of room is a one-character code that refers to smoking (S) or non-smoking (N). 
+Price refers to the price of the room per night.
+
+In the Booking table, Guest_No refers to the primary key of the Guest table; 
+Hotel_No and Room_No combined refer to the primary key of the Room table.
+
+Hotel              (Hotel_No, Name, City)
+Room               (Room_No, @Hotel_No, Type, Price)
+Booking            (@Hotel_No, @Guest_No, Date_From, Date_To, @Room_No)
+Guest              (Guest­_No, Name, City)
+For every table, it is up to you to decide which is the appropriate
+ datatype for each one of the columns based on the column descriptions given above. 
+If you make assumptions that affect the way you define the columns, please note those assumptions in your assignment.
