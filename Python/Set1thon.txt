@@ -1,0 +1,159 @@
+Solution set 1-Python:
+
+1.Write a program that examines three variables—x, y, and z— and prints the largest odd number among them. If none of them are odd, it should print a message to that effect.
+
+a=int(input())
+b=int(input())
+c=int(input())
+list1=[]
+max=0
+if a%2!=0:
+    list1.append(a)
+if b%2!=0:
+    list1.append(b)
+if c%2!=0:
+    list1.append(c)
+for i in list1:
+    if i>max:
+        max=i
+if max>0:
+    print(max)
+else:
+    print("Enter atleast one odd number")
+
+2.
+Python provides a built-in function called len that returns the length of a string, so the value of len('Cigna') is 5. Write a function named right_justify that takes a string named s as a parameter and prints the string with enough leading spaces so that the last letter of the string is in column 70 of the display.
+
+
+def right_justify(str1):
+    print(str1.rjust(70-len(str1)))
+str2=str(input())
+right_justify(str2)
+
+
+
+3.Write a program that asks the user to input 10 integers, and then prints the largest odd number that was entered. If no odd number was entered, it should print a message to that effect.
+
+
+list1 = []
+for i in range(0,10):
+    a = int(input("enter the numbers"))
+    if a % 2 != 0:
+        list1.append(a)
+#else:
+    
+    #print("No Odd Numbers")
+print("Max of list : ",max(list1))
+
+
+
+4.Practice using the Python interpreter as a calculator:
+
+a) The volume of a sphere with radius r is 4/3pr3. What is the volume of a sphere with radius 5?
+Hint: 392.7 is wrong!
+
+b) Suppose the cover price of a book is Rs.24.95, but bookstores get a 40% discount. Shipping costs
+Rs.3 for the first copy and 0.75p for each additional copy. What is the total wholesale cost for
+60 copies?
+
+c) If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at
+tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+
+start_time_hr = 6 + 52 / 60.0
+easy_pace_hr = (8 + 15 / 60.0 ) / 60.0
+tempo_pace_hr = (7 + 12 / 60.0) / 60.0
+running_time_hr = 2 * easy_pace_hr + 3 * tempo_pace_hr
+breakfast_hr = start_time_hr + running_time_hr
+breakfast_min = (breakfast_hr-int(breakfast_hr))*60
+#breakfast_sec= (breakfast_min-int(breakfast_min))*60
+
+print ('breakfast_at:', int(breakfast_hr),':', int(breakfast_min))
+
+
+
+a)a=int(input("Enter the sphere radius"))
+volume=4/3*22/7*pow(a,3)
+print(volume)
+
+
+b)price = float(input("Enter the price")) 
+Book_no = int(input("Enter total no of books")) 
+
+totalcost = price*Book_no
+discounted_cost = totalcost * (40 / 100)
+actual = totalcost - discounted_cost
+
+extra= Book_no - 1
+overall = (extra* 0.75) + (actual*3)
+print(overall)
+
+
+
+
+5.Write a program that asks the user to enter an integer and prints two integers, root and pwr, such that 0 < pwr < 6 and root**pwr is equal to the integer entered by the user. If no such pair of integers exists, it should print a message to that effect.
+
+a = int(input("Enter a number"))
+
+for i in range(1, 6):
+    for j in range(1,10):
+        n = j ** i
+        if n == a:
+            print("root is : ", j, "power is : ", i)
+
+
+6.
+Let s be a string that contains a sequence of decimal numbers separated by commas, e.g., s = '1.23,2.4,3.123'. Write a program that prints the sum of the numbers in s.
+
+
+
+s = '1.23,2.4,3.123'
+values = s.split(",")
+tot= 0
+for i in values:
+    tot = tot +float(i)
+print(tot)
+
+
+7.
+
+Write a function isIn() that accepts two strings as arguments and returns True if either string occurs anywhere in the other, and False otherwise. 
+Hint: you might want to use the built-in str operation in.
+
+
+a=input("Enter the string1")
+b=input("Enter the string2")
+def isIn(a,b):
+    if a in b or b in a:
+        print("True")
+    else:
+        print("False")
+
+isIn(a,b)
+
+8)
+
+
+
+9.
+Assume that we execute the following assignment statements: width = 17 height = 12.0 delimiter = '.' For each of the following expressions, write the value of the expression and the type (of the value of the expression).
+>>> width/2
+>>> width/2.0
+>>> height/3
+>>> 1 + 2 * 5
+>>> delimiter * 5
+Use the Python interpreter to check your answers
+
+
+width=17
+height=12.0
+delimiter='.'
+print(type(width/2))
+print(type(width/2.0))
+print(type(height/3))
+print(type(1+2*5))
+print(type(delimiter*5))
+
+
+10.
+
+
