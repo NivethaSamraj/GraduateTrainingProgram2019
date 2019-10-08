@@ -2878,6 +2878,8 @@ Order is also considered.
 
 
 
+decorators:
+
 
 def div(a,b):
     print(a/b)
@@ -2892,4 +2894,29 @@ def smart_div(func):
 div=smart_div(div)
 div(2,5)
 
+OOPS:
+
+
+class Fun:
+    def __init__(self):
+        self.name='naveen'
+        self.age=28
+
+    def compare(self,other):
+        if self.age==other.age:
+            return True
+        else:
+            False
+
+
+f1=Fun()
+f2=Fun()
+
+if f1.compare(f2):
+    print("same objects")
+else:
+    print("diff")
+          
+print(f1.name)
+print(f2.name)
     
