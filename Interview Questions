@@ -1,0 +1,110 @@
+ 
+
+1: Hands on coding – Python ( Bob asked to write the below code in python )
+
+    Reverse string
+
+    Number of each chars in a string
+
+2: Sql – Joins / having and where / group by syntax / union vs union all 
+
+3: Question on GIT – Fetch & Pull
+
+
+
+
+
+
+
+
+http://www.testingbrain.com/interview/python-interview-questions.html
+
+ 
+
+Is python a case sensitive language? Yes
+
+Standard datatypes in python?  Numbers String List Tuple Dictionary
+
+What is PEP8?
+
+Print a string twice?
+
+What is the output of print list[1:3] if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?
+
+What is the output of print tinylist * 2 if tinylist = [123, 'john']?
+
+What is a Python decorator?
+
+What are Python's dictionaries?
+
+Which function gets all keys from dictionary? dictionary.keys() function
+
+Which function gets all values from dictionary? dictionary.values() function
+
+What is the difference between list and tuple?
+
+What are Dict and List Comprehensions?
+
+What is Lambda in Python?
+
+What are iterators?
+
+What is slicing?
+
+What is pass in Python?
+
+Diff between continue and pass
+
+What is unittest?
+
+How do you delete a file in Python?
+
+
+What is the use of the split function in Python?
+
+Shallow copy and deep copy?
+
+Generators in python?
+
+Exception handling in python
+
+lstrip() − Removes all leading whitespace in string.
+
+Performs both lstrip() and rstrip() on string - leading and trailing whitespace in string
+
+swapcase() − Inverts case for all letters in string.
+
+convert the first character of a string to uppercase letter - str.capitalize
+
+__slots__
+
+__init__
+
+scope in python
+
+pickling and unpickling
+
+negative index
+
+
+local and global variables
+
+how to share global variables across modules
+
+namespace in python
+
+How do you keep track of different versions of your code?
+
+*args
+
+Define self?
+
+
+filter() – enables you to extract a subset of values based on conditional logic.
+
+map() – it is a built-in function that applies the function to each item in an iterable.
+
+reduce() – repeatedly performs a pair-wise reduction on a sequence until a single value is computed.
+
+
+ 
