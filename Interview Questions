@@ -108,3 +108,40 @@ reduce() – repeatedly performs a pair-wise reduction on a sequence until a sin
 
 
  
+ 
+  
+
+Python 
+
+1: Write program to print multiplication table.
+
+2: Write program to reverse the string [ different options , like using standard function or using loop etc ]
+
+3: Difference between dictionary, list, tuples
+
+4: Write program to count the number of occurrences of chars in a string. Example : str ='aabbccc' o/p 2a2b3c
+
+ 
+
+SQL
+
+1: Union vs union all
+
+2: Joins, different joins and some scenarios what join to use.
+
+3: Use of partition , qualify, row_num 
+
+4: Write script to display customer names who not yet watched movies
+
+   Table 1 : Customer 
+
+   Table 2 : Movie list
+
+5: Different key , primary, secondary, foreign , alternate 
+
+ 
+
+GIT
+
+1: Different commands and usage of each.
+
