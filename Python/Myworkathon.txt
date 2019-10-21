@@ -348,3 +348,17 @@ answer = dict.fromkeys("aeiou", 0)
 9)
 answer = {count: chr(count) for count in range(65,91)} 
 
+
+
+#create a list
+l = [("x", 1), ("x", 2), ("x", 3), ("y", 1), ("y", 2), ("z", 1)]
+d = {}
+for a, b in l:
+    d.setdefault(a, []).append(b)
+print (d)
+
+o/p:
+
+Sample Output:
+
+{'y': [1, 2], 'z': [1], 'x': [1, 2, 3]} 
